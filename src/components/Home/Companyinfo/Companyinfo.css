@@ -1,0 +1,15 @@
+.companyinfo__social {
+  transition: 0.5;
+}
+
+.companyinfo__social__fb:hover {
+  color: rgba(29, 29, 248, 0.952);
+}
+
+.companyinfo__social__ig:hover {
+  color: rgba(248, 29, 182, 0.952);
+}
+
+.companyinfo__social__tw:hover {
+  color: rgba(52, 151, 197, 0.952);
+}

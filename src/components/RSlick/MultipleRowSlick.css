@@ -1,0 +1,291 @@
+.slick-prev:before,
+.slick-next:before {
+    color: gray !important;
+    font-size: 3rem !important;
+}
+
+.width-item {
+    width: 100% !important;
+}
+
+/* .slick-initialized .slick-slide {
+  width: 300px;
+} */
+
+.slick__content {
+    margin: 10px 30px !important;
+}
+
+.slick__content .slick__content__img img {
+    opacity: 0 !important;
+}
+
+.slick-prev {
+    left: -40px;
+}
+
+.slick-next {
+    right: -20px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .slick__cardbody p {
+        font-size: 15px !important;
+    }
+
+    .movielist .movielist__content .movielist__button button {
+        position: absolute;
+        top: 25px;
+        left: 82px;
+        height: 27%;
+        width: 34%;
+        color: white;
+        z-index: 30;
+        opacity: 1;
+    }
+
+    .movielist .movielist__button .movielist__button__icon {
+        font-size: 20px;
+        margin-top: 60px;
+        padding: 5px 15px;
+        color: white !important;
+        background-color: transparent;
+        border: 1px solid white;
+        opacity: 1;
+    }
+}
+.slick__content .movielist__content {
+    position: relative;
+}
+
+.slick__content:hover .movielist__content .movielist__overlay {
+    position: absolute;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, black, transparent 100%);
+    z-index: 20;
+    top: 0;
+    left: 0;
+}
+
+.slick__content .movie .movielist__content .slick__content__img img {
+    position: absolute;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+}
+
+.movielist .movielist__content .movielist__button button {
+    position: absolute;
+    top: 25px;
+    left: 82px;
+    height: 27%;
+    width: 34%;
+    color: white;
+    z-index: 30;
+    opacity: 0;
+}
+
+.movielist .movielist__content:hover .movielist__button button {
+    position: absolute;
+    top: 25px;
+    left: 82px;
+    height: 27%;
+    width: 34%;
+    color: white;
+    z-index: 30;
+    opacity: 1;
+}
+
+.movielist .movielist__button .movielist__button__icon {
+    font-size: 30px;
+    margin-top: 60px;
+    padding: 5px 15px;
+    color: white !important;
+    background-color: transparent;
+    border: 1px solid white;
+    opacity: 1;
+}
+.slick-dots {
+    opacity: 0;
+}
+
+.anticon svg {
+    margin-bottom: 5px !important;
+    color: rgb(218, 49, 49);
+}
+
+.ant-input-search-button {
+    height: 34px !important;
+    width: 35px;
+}
+
+.ant-input {
+    padding: 5px;
+}
+
+.buttn__allmovie {
+    background: linear-gradient(
+        to right,
+        #5c96e2 0%,
+        #fceeb5 50%,
+        #e76256 100%
+    );
+    background-size: 500%;
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    color: white;
+
+    font: 1.5em sans-serif;
+    height: 4rem;
+    letter-spacing: 0.05em;
+    outline: none;
+    width: 20rem;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+button:hover {
+    animation-name: gradient;
+
+    animation-duration: 2s;
+
+    animation-iteration-count: 1;
+
+    animation-fill-mode: forwards;
+}
+
+.ant-input-group-wrapper {
+    width: 20rem;
+    height: 3rem;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: 'Open Sans', Arial, Verdana;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #fff;
+    background-color: gray !important;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.ant-input-group input {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    border-color: transparent;
+    margin-top: 5px;
+
+    margin-left: 13px;
+    font-weight: bold;
+    padding: 0;
+    font-size: 20px;
+    color: white !important;
+}
+
+.ant-input:focus,
+.ant-input-focused {
+    box-shadow: none !important;
+}
+
+.ant-input-search > .ant-input-group > .ant-input-group-addon {
+    background-color: white !important;
+    border-radius: 50%;
+}
+
+.ant-input-search > .ant-input-group > .ant-input-group-addon button {
+    opacity: 1;
+    border-radius: 50% !important;
+    background: red !important;
+    background-color: transparent !important;
+}
+
+.cardbody__button {
+    position: relative;
+
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    overflow: hidden;
+    border-radius: 40px;
+    height: 40px;
+    width: 150px;
+}
+
+.cardbody__button a {
+    width: 100%;
+    padding-top: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cardbody__button span {
+    position: relative;
+    color: #fff;
+    font-size: 15px;
+    font-family: Arial;
+    letter-spacing: 2px;
+    z-index: 1;
+    text-align: center !important;
+}
+.cardbody__button__liquid {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: #4973ff;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+a .cardbody__button__liquid::after,
+a .cardbody__button__liquid::before {
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: #000;
+}
+
+a .cardbody__button__liquid::before {
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    animation: animate 5s linear infinite;
+}
+
+a .cardbody__button__liquid::after {
+    border-radius: 40%;
+    background: rgba(20, 20, 20, 0.5);
+    animation: animate 10s linear infinite;
+}
+
+a:hover .cardbody__button__liquid {
+    top: -120px;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}

@@ -1,0 +1,25 @@
+.logo img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+}
+
+.site-layout-background {
+    background-position: center;
+    background-size: cover;
+    margin: 0 !important;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+}
+
+.admin__header .anticon svg {
+    color: white !important;
+}
+.admin__header .ant-menu-item .ant-menu-item-icon,
+.ant-menu-submenu-title .ant-menu-item-icon,
+.ant-menu-item .anticon,
+.ant-menu-submenu-title .anticon {
+    color: white !important;
+}

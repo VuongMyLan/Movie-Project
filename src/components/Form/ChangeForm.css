@@ -1,0 +1,19 @@
+
+label{
+    color: black;
+}
+.btn-action{
+    height: 50px;
+    margin:20px;
+
+}
+.switch-control > label{
+    margin-bottom: 0;
+    padding: 10px;
+
+}
+.movie-film-img{
+    width: 300px;
+    height: 300px;
+}
+

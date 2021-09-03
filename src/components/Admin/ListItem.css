@@ -1,0 +1,34 @@
+
+
+
+.List-item{
+    background-color: white;
+    margin-top: 15px;
+    border: 2px solid cornflowerblue;
+    height: 10vh;
+    text-align: center;
+}
+.img-container-admin{
+    height: 100%;
+
+}
+.admin-contain-btn {
+   height: 100%;
+
+}
+.admin-contain-btn >button {
+    width: 30%;
+    height: 50%;
+}
+.admin-name-movie{
+    font-size: 30px;
+}
+.img-film{
+    width: 100%;
+    height: 100%;
+}
+.info-detail{
+    margin:10px;
+    font-size: 25px;
+    color: cornflowerblue;
+}

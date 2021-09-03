@@ -1,0 +1,108 @@
+.addfilm__button .btn-add {
+    width: 80px;
+    font-size: 15px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background: linear-gradient(-45deg, #20c3c9, #20aacc, #375f96, #3cf0c5);
+    background-size: 600%;
+    color: white !important;
+    border-color: transparent;
+    animation: addfilm 5s linear infinite;
+    background-position: 0% 50%;
+}
+
+@keyframes addfilm {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .btn-add {
+        width: 100%;
+        font-size: 9px;
+        font-weight: bold;
+        height: 35px;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+            0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+
+.addfilm__button .ant-input-group-wrapper {
+    width: 300px !important;
+}
+
+.addfilm__button .ant-btn-primary {
+    border-color: transparent !important;
+}
+.addfilm__button
+    .ant-input-search
+    > .ant-input-group
+    > .ant-input-group-addon
+    button {
+    padding: 0 !important;
+    padding-left: 2px !important;
+}
+.addfilm__button .ant-btn-primary span {
+    font-size: 15px;
+    padding-right: 3px;
+}
+
+/* .dashboard__content {
+    align-items: center;
+} */
+.dashboard__header {
+    border-radius: 50px;
+    border: 1px solid white;
+    width: 40%;
+    margin: auto;
+    font-size: 30px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #d8dedf, #c1ccdb, #20aacc, #508a94);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dashboard__header::before {
+    content: 'Films Dashboard Control';
+    font-family: Arial;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard__header::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -50%;
+    height: 60%;
+    width: 200%;
+    box-sizing: border-box;
+    background-color: rgba(202, 225, 231, 0.856);
+    border-radius: 50%;
+    animation: spin 4s linear infinite;
+    filter: blur(10px);
+}
+
+@keyframes spin {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    100% {
+        transform: translateY(-100%) rotate(180deg);
+    }
+}

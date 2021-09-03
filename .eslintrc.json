@@ -1,0 +1,29 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": ["react", "prettier"],
+    "rules": {
+        "no-unused-vars": "warn",
+        "no-console": "warn",
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto",
+                "singleQuote": true,
+                "jsxSingleQuote": true,
+                "tabWidth": 4
+            }
+        ],
+        "react/prop-types": "off"
+    }
+}

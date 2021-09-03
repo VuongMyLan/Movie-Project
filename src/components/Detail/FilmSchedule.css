@@ -1,0 +1,4 @@
+.ant-tabs-content-holder {
+    overflow-x: scroll !important;
+    height: 300px !important;
+}

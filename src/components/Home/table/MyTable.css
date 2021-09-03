@@ -1,0 +1,87 @@
+.mytable {
+    border: 1px solid grey !important;
+    height: 500px;
+}
+
+.filmbooking__content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 550px;
+}
+
+.filmbooking__content ::-webkit-scrollbar {
+    width: 20px;
+}
+
+.filmbooking__content ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.filmbooking__content ::-webkit-scrollbar-thumb {
+    background: rgb(139, 9, 9);
+    border-radius: 10px;
+}
+
+.button__getticket__effect {
+    font-size: 14px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    background: linear-gradient(-45deg, #5ee3e7, #20aacc, #338aff, #3cf0c5);
+    background-size: 600%;
+    animation: anime 16s linear infinite;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.button__content {
+    position: relative;
+}
+
+.button__getticket {
+    width: 150px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* .button__getticket__effect {
+    position: absolute;
+    margin-top: -70px;
+    z-index: -1;
+    filter: blur(30px);
+    opacity: 0.8;
+} */
+
+@keyframes anime {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(2, 44, 73);
+    border-radius: 10px;
+}

@@ -1,0 +1,317 @@
+.chair {
+    width: 35px;
+    height: 35px;
+    margin: 15px;
+    background-color: rgb(125, 120, 120);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.chosenChair {
+    background-color: rgb(225, 67, 67) !important;
+    cursor: no-drop;
+}
+
+.Vip {
+    background-color: rgb(255, 165, 0);
+}
+
+.bookingChair {
+    background-color: rgb(57, 224, 57);
+}
+
+.bookedByUser {
+    color: red !important;
+    background-color: papayawhip !important;
+}
+
+.theater__info {
+    font-size: 20px;
+}
+
+.bookedByOtherUsers {
+    color: white !important;
+    background-color: rgb(56, 56, 224) !important;
+}
+
+@media screen and (max-width: 1140px) {
+    .chair {
+        width: 25px;
+        height: 25px;
+        margin: 15px;
+        background-color: rgb(125, 120, 120);
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 10px;
+        padding: 2px;
+    }
+
+    .chosenChair {
+        background-color: rgb(225, 67, 67) !important;
+        cursor: no-drop;
+    }
+
+    .Vip {
+        background-color: rgb(255, 165, 0);
+    }
+
+    .bookingChair {
+        background-color: rgb(57, 224, 57);
+    }
+
+    .bookedByUser {
+        color: red !important;
+        background-color: papayawhip !important;
+    }
+
+    .theater__info {
+        font-size: 20px;
+    }
+
+    .bookedByOtherUsers {
+        color: white !important;
+        background-color: rgb(56, 56, 224) !important;
+    }
+}
+
+@media screen and (max-width: 985px) {
+    .chair {
+        width: 20px;
+        height: 20px;
+        margin: 6px;
+        background-color: rgb(125, 120, 120);
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 8px;
+        padding: 2px;
+    }
+
+    .chosenChair {
+        background-color: rgb(225, 67, 67) !important;
+        cursor: no-drop;
+    }
+
+    .Vip {
+        background-color: rgb(255, 165, 0);
+    }
+
+    .bookingChair {
+        background-color: rgb(57, 224, 57);
+    }
+
+    .bookedByUser {
+        color: red !important;
+        background-color: papayawhip !important;
+    }
+
+    .theater__info {
+        font-size: 20px;
+    }
+
+    .bookedByOtherUsers {
+        color: white !important;
+        background-color: rgb(56, 56, 224) !important;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .chair {
+        width: 15px;
+        height: 15px;
+        margin: 6px;
+        background-color: rgb(125, 120, 120);
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 6px;
+        padding: 2px;
+    }
+
+    .chosenChair {
+        background-color: rgb(225, 67, 67) !important;
+        cursor: no-drop;
+    }
+
+    .Vip {
+        background-color: rgb(255, 165, 0);
+    }
+
+    .bookingChair {
+        background-color: rgb(57, 224, 57);
+    }
+
+    .bookedByUser {
+        color: red !important;
+        background-color: papayawhip !important;
+    }
+
+    .theater__info {
+        font-size: 20px;
+    }
+
+    .bookedByOtherUsers {
+        color: white !important;
+        background-color: rgb(56, 56, 224) !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .chair {
+        width: 12px;
+        height: 12px;
+        margin: 3px;
+        background-color: rgb(125, 120, 120);
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 6px;
+        padding: 1px;
+    }
+
+    .chosenChair {
+        background-color: rgb(225, 67, 67) !important;
+        cursor: no-drop;
+    }
+
+    .Vip {
+        background-color: rgb(255, 165, 0);
+    }
+
+    .bookingChair {
+        background-color: rgb(57, 224, 57);
+        color: white !important;
+    }
+
+    .bookedByUser {
+        color: red !important;
+        background-color: papayawhip !important;
+    }
+
+    .theater__info {
+        font-size: 20px;
+    }
+
+    .bookedByOtherUsers {
+        color: white !important;
+        background-color: rgb(56, 56, 224) !important;
+    }
+}
+
+.booking__button {
+    font-size: 30px;
+    margin: 5px;
+    padding: 0 50px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.chair__tittle {
+    width: 80%;
+}
+
+.booking__history {
+    width: 100%;
+}
+
+.bookinghistory__content {
+    font-size: 15px;
+}
+
+.chair__tittle .anticon svg {
+    color: white !important;
+}
+.chair__content .anticon svg {
+    color: white !important;
+}
+
+.checkoutbody__button {
+    position: relative;
+
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    overflow: hidden;
+    border-radius: 40px;
+    height: 60px;
+    width: 300px;
+}
+
+.checkoutbody__button a {
+    width: 100%;
+    padding-top: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.checkoutbody__button span {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial;
+    letter-spacing: 2px;
+    z-index: 1;
+    text-align: center !important;
+    transform: translate(5%, 8%);
+}
+.checkoutbody__button__liquid {
+    position: absolute;
+    top: -106px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: #d15f5f;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+a .checkoutbody__button__liquid::after,
+a .checkoutbody__button__liquid::before {
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: #000;
+}
+
+a .checkoutbody__button__liquid::before {
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 1);
+    animation: animate 5s linear infinite;
+}
+
+a .checkoutbody__button__liquid::after {
+    border-radius: 40%;
+    background: rgba(20, 20, 20, 0.5);
+    animation: animate 10s linear infinite;
+}
+
+a:hover .checkoutbody__button__liquid {
+    top: -138px;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}

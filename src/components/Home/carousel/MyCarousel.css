@@ -1,0 +1,19 @@
+.carousel__banner {
+  margin-top: 54px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  background-color: transparent;
+  border: none;
+}
+
+.carouselImg img {
+  height: 90%;
+  width: 100%;
+}
+
+.slick-dots-bottim {
+  margin: 0 !important;
+  padding: 0 !important;
+}

@@ -1,0 +1,15 @@
+
+.img-col{
+    text-align: center;
+    align-items: center;
+}
+
+.img-col > img{
+    width: 50%;
+}
+.select-rap{
+    width: 70%;
+}
+.ticket-price{
+    width: 70%;
+}

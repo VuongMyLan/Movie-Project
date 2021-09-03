@@ -1,0 +1,74 @@
+.FilmDetail-container {
+    margin-top: 50px;
+}
+
+.FilmDetail-content {
+    margin-top: 4px;
+    height: 60%;
+    width: 100%;
+}
+
+.FilmDetail-trailer > iframe {
+    min-height: 65vh;
+    width: 100%;
+}
+
+.Detail-Info-Name {
+    width: 100%;
+
+    text-align: center;
+}
+.Detail-Info-mid {
+    margin-top: 40px;
+    font-size: 20px;
+}
+.Detail-Info-btn-booking {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
+.Detail-Info-btn-booking > button {
+    width: 30%;
+    transform: scale(2);
+    text-align: center;
+}
+.btn-booking:hover {
+    color: cornflowerblue;
+    box-shadow: 2px 2px gray;
+}
+.Detail-Image > img {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+.Detail-Info-rate {
+    text-align: center;
+    transform: scale(2);
+}
+.film__tittle {
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    background: linear-gradient(-45deg, #5ee3e7, #20aacc, #338aff, #26a185);
+    background-size: 600%;
+    animation: anime 5s linear infinite;
+    padding: 5px 0;
+    font-weight: bold;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 5px;
+}
+.Detail__info__des {
+    font-size: 20px;
+}
+.rate {
+    font-size: 13px;
+}
+
+.Detail-Info-mid .Detail-Info-rate .rate__circle {
+    margin-left: 72px !important;
+}

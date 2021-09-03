@@ -1,0 +1,13 @@
+.profile__content {
+  margin-top: 100px !important;
+  background-color: #e4d0b794 !important;
+  padding: 10px;
+  height: 700px;
+  overflow-y: scroll;
+}
+
+.profile__img img {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px;
+}

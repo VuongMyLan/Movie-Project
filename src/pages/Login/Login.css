@@ -1,0 +1,79 @@
+.Login-Container {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.my-form {
+    position: relative;
+    background-color: rgba(20, 50, 93, 0.8);
+    height: 85%;
+    width: 45%;
+    padding: 20px;
+    margin-top: 110px;
+}
+.btn-close-login {
+    position: absolute;
+    top: -20px;
+    width: 45px;
+    height: 45px;
+    right: -20px;
+}
+.form-header,
+h4 {
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin: 10px;
+}
+label {
+    color: white;
+    font-size: 15px;
+}
+.form-button {
+    text-align: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.form-button-signup {
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+.nav-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#nav-signin-tab {
+    width: 50%;
+    text-align: center;
+}
+#nav-signup-tab {
+    width: 50%;
+    text-align: center;
+}
+
+.my-form .form__login .form__logincontent {
+    height: 84%;
+}
+
+.register__message {
+    font-size: 15px;
+}
+
+.form__logincontent .text__title label {
+    color: white !important;
+}

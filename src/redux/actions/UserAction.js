@@ -1,12 +1,10 @@
 import { ACCESSTOKEN, USER_LOGIN } from '../../util/setting';
 import { userService } from '../services/UserService';
 import { history } from '../../App';
-import { useSelector } from 'react-redux';
+
 import { BOOKING_HISTORY } from './types/FilmType';
 import { displayLoadingAction, hideLoadingAction } from './LoadingAction';
 import { quanLyNguoiDungService } from '../services/QuanLyNguoiDungService';
-import { SET_LIST_USER } from './types/FilmType';
-import { Alert } from 'antd';
 
 export const userLoginAction = (userInfo) => {
     return async (dispatch) => {
@@ -18,7 +16,7 @@ export const userLoginAction = (userInfo) => {
                 isLogin: true,
             };
             dispatch(action);
-            console.log('result', result.data);
+
             localStorage.setItem(USER_LOGIN, JSON.stringify(result.data));
             localStorage.setItem(ACCESSTOKEN, result.data.accessToken);
             if (result.data.maLoaiNguoiDung === 'KhachHang') {
@@ -28,7 +26,6 @@ export const userLoginAction = (userInfo) => {
             }
             //history.goBack();
         } catch (error) {
-            console.log('error', error.response?.data);
             alert(error.response?.data);
         }
     };
@@ -70,11 +67,8 @@ export const getListUSer =
 // add user action
 export const addUser = (formData) => async (dispatch) => {
     try {
-        console.log(formData);
-
         const response = await quanLyNguoiDungService.AddUser(formData);
         alert('add user success!');
-        console.log(response.data);
     } catch (err) {
         alert(err.response?.data);
         console.log('error', err.response?.data);
@@ -83,13 +77,12 @@ export const addUser = (formData) => async (dispatch) => {
 // edit user action
 export const editUser = (formData) => async (dispatch) => {
     try {
-        console.log('vlues', formData);
         await dispatch(displayLoadingAction);
         const response = await quanLyNguoiDungService.UpdateUser(formData);
         alert('edit user success!');
 
         // history.push('/admin/userinfo');
-        console.log(response.data);
+
         await dispatch(hideLoadingAction);
     } catch (err) {
         alert(err.response?.data);
@@ -120,8 +113,6 @@ export const userHistoryAction = (userinfo) => {
             };
             dispatch(action);
             await dispatch(hideLoadingAction);
-
-            console.log('thongtinnguoidung', result.data);
         } catch (error) {
             console.log('error', error.response?.data);
         }

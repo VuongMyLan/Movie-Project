@@ -13,7 +13,7 @@ export default function footer() {
                         ></img>
                     </div>
                     <div className='col-9'>
-                        <h4 className='text-dark text-left pl-0'>
+                        <h4 className='text-dark text-left pl-0 ml-0'>
                             MONACO COMPANY LIMITED.,
                         </h4>
                         <p className='text-dark'>

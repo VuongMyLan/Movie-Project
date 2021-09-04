@@ -1,32 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useState } from 'react';
-import {
-    Form,
-    Input,
-    Button,
-    Radio,
-    Select,
-    Cascader,
-    DatePicker,
-    InputNumber,
-    TreeSelect,
-    Switch,
-} from 'antd';
-import { useSelector } from 'react-redux';
+import { Form, Input, Button, Radio, DatePicker, InputNumber } from 'antd';
+
 import AdminTemplate from '../../components/Templates/AdminTemplate/AdminTemplate';
 import { useFormik } from 'formik';
 import { Fragment } from 'react';
-import {
-    AddFilmAction,
-    EditFilmAction,
-    getApiFilmDetail,
-} from '../../redux/actions/FilmActions';
+import { AddFilmAction } from '../../redux/actions/FilmActions';
 import { useDispatch } from 'react-redux';
 import moment from 'moment';
 
 import * as Yup from 'yup';
 
-export default function AddFilm(props) {
+export default function AddFilm() {
     const dispatch = useDispatch();
 
     const formik = useFormik({
@@ -60,7 +45,6 @@ export default function AddFilm(props) {
             hinhAnh: Yup.string().required('Required'),
         }),
         onSubmit: (values) => {
-            console.log(values);
             let formData = new FormData();
             for (let key in values) {
                 if (key !== 'hinhAnh') {
@@ -83,7 +67,6 @@ export default function AddFilm(props) {
     const [componentSize, setComponentSize] = useState('default');
 
     const handleDatePicker = (value) => {
-        console.log('ngayKhoiChieu', moment(value).format('DD/MM/YYYY'));
         formik.setFieldValue(
             'ngayKhoiChieu',
             moment(value).format('DD/MM/YYYY')
@@ -106,7 +89,6 @@ export default function AddFilm(props) {
             const reader = new FileReader();
             reader.readAsDataURL(file);
             reader.onload = (e) => {
-                console.log('data', e.target.result);
                 setImg(e.target.result);
             };
         }

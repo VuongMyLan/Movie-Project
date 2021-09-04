@@ -3,7 +3,7 @@ import HomeTemplate from '../../components/Templates/HomeTemplate/HomeTemplate';
 import './Checkout.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { bookingroomAction } from '../../redux/actions/FilmActions';
-import PropTypes from 'prop-types';
+
 import { USER_LOGIN } from '../../util/setting';
 import { NavLink } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
@@ -12,9 +12,6 @@ import {
     UserAddOutlined,
     CheckOutlined,
     CloseOutlined,
-    UserOutlined,
-    SmileOutlined,
-    HomeOutlined,
 } from '@ant-design/icons';
 import {
     BOOK_CHAIR,
@@ -280,10 +277,7 @@ function Checkout(props) {
                                                     taiKhoanNguoiDung:
                                                         userLogin.taiKhoan,
                                                 };
-                                                console.log(
-                                                    'danhSachVe',
-                                                    thongTinDatVe
-                                                );
+
                                                 dispatch(
                                                     bookingTicketAction(
                                                         thongTinDatVe
@@ -314,16 +308,11 @@ function Checkout(props) {
 // };
 
 const { TabPane } = Tabs;
-function callback(key) {
-    // console.log(key);
-}
 
-export const BookingResult = (props) => {
+export const BookingResult = () => {
     const dispatch = useDispatch();
     const { userHistory } = useSelector((state) => state.UserReducer);
     const { userLogin } = useSelector((state) => state.UserReducer);
-    console.log('userLogin', userLogin.taiKhoan);
-    console.log('userHistory', userHistory);
     useEffect(() => {
         const action = userHistoryAction(userLogin);
         dispatch(action);
@@ -398,14 +387,13 @@ export const BookingResult = (props) => {
 const CheckoutTabs = (props) => {
     const { tabActive } = useSelector((state) => state.BookingTicketReducer);
     const dispatch = useDispatch();
-    console.log('tabActive', tabActive);
+
     return (
         <div className='p-5'>
             <Tabs
                 defaultActiveKey='1'
                 activeKey={tabActive}
                 onChange={(key) => {
-                    console.log('object', key);
                     dispatch({
                         type: CHANGE_TAB_ACTIVE,
                         number: key.toString(),

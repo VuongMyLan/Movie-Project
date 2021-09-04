@@ -10,13 +10,13 @@ import Register from './pages/Register/Register';
 import Detail from './pages/Detail/Detail';
 import Checkout from './pages/Checkout/Checkout';
 //import AdminPage from './pages/AdminPage/AdminPage';
-import ThemPhim from './pages/QuanLyPhim/ThemPhim';
+
 import QuanLyPhim from './pages/QuanLyPhim/QuanLyPhim';
 import QuanLyLichChieu from './pages/QuanLyRap/QuanLyLichChieu';
 import QuanLyNguoiDung from './pages/QuanLyNguoiDung/QuanLyNguoiDung';
-import MultipleRowSlick from '../src/components/RSlick/MultipleRowSlick';
+
 import Loading from './components/Loading/Loading';
-import SuaPhim from './pages/QuanLyPhim/SuaPhim';
+
 import AddUser from './pages/QuanLyNguoiDung/AddUser';
 import EditUSer from './pages/QuanLyNguoiDung/EditUser';
 import EditFilm from './pages/QuanLyPhim/EditFilm';
@@ -38,10 +38,8 @@ function App() {
                     <Route path='/detail/:postId' exact component={Detail} />
                     <Route path='/checkout/:id' exact component={Checkout} />
 
-                    {/*<Route path="/admin" exact component={AdminPage}/>*/}
-                    {/* <Route path='/admin/addfilm' exact component={ThemPhim} /> */}
                     <Route path='/admin/film' exact component={QuanLyPhim} />
-                    {/* <Route path='/admin/film/:id' exact component={SuaPhim} /> */}
+
                     <Route path='/admin/film/:id' exact component={EditFilm} />
                     <Route path='/admin/addfilm' exact component={AddFilm} />
                     <Route
@@ -64,7 +62,6 @@ function App() {
                         exact
                         component={EditUSer}
                     />
-                    {/* <Route path="/moive/:id" exact component={Movie} /> */}
                 </Switch>
             </Router>
         </div>

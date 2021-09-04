@@ -14,7 +14,7 @@ import {
 import './AdminTemplate.css';
 import { USER_LOGIN } from '../../../util/setting';
 import { history } from '../../../App';
-import backgroundadmin1 from '../../../asset/img/backgroundadmin1.jpg';
+
 //
 
 const { Header, Sider, Content } = Layout;
@@ -93,6 +93,9 @@ export default function AdminTemplate(props) {
                         <NavLink to='/admin/userinfo'>
                             Quản lý Người Dùng
                         </NavLink>
+                    </Menu.Item>
+                    <Menu.Item key='4' icon={<i className='fa fa-home'></i>}>
+                        <NavLink to='/home'>Back to Home Page</NavLink>
                     </Menu.Item>
                 </Menu>
             </Sider>

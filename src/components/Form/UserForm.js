@@ -211,7 +211,7 @@ const UserForm = ({ isEdit }) => {
                 <NavLink to='/admin/userinfo' className='mb-2 btn-back'>
                     <button
                         type='button'
-                        className='mb-2 btn-action button__action'
+                        className='b-2 mb-2 btn-action button__action'
                         style={{ width: 100 }}
                     >
                         Back

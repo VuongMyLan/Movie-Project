@@ -5,15 +5,7 @@ import { Rate } from 'antd';
 import moment from 'moment';
 import '../../style/circle.css';
 // render film img trailer description
-const FilmDetail = ({
-    name,
-    description,
-    rank,
-    image,
-    startday,
-    trailer,
-    timeSchedule,
-}) => {
+const FilmDetail = ({ name, description, rank, image, startday }) => {
     return (
         <div className='d-flex  flex-column  FilmDetail-container'>
             <h1 className='text-center film__tittle'>{name}</h1>

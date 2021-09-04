@@ -3,11 +3,7 @@ import React, { Fragment } from 'react';
 import PropsType from 'prop-types';
 import { Table } from 'antd';
 import { NavLink } from 'react-router-dom';
-import {
-    EditOutlined,
-    DeleteOutlined,
-    CalendarOutlined,
-} from '@ant-design/icons';
+
 import './ListItemContainer.css';
 import { useDispatch } from 'react-redux';
 import { deleteUser } from '../../redux/actions/UserAction';
@@ -240,7 +236,6 @@ const ListItemContainer = ({ filmData, ControlRender }) => {
                                     // dispatch(xoaPhimAction(film.maPhim));
                                     dispatch(deleteUser(User.taiKhoan));
                                     alert('xóa người dùng thành công');
-                                    console.log('xoa ');
                                 }
                             }}
                         >
@@ -254,7 +249,6 @@ const ListItemContainer = ({ filmData, ControlRender }) => {
         },
     ];
     const renderTable = () => {
-        console.log('ControlRender', ControlRender);
         return (
             <div>
                 {ControlRender === 'FilmsControl' ? (

@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+
 import HomeTemplate from '../../components/Templates/HomeTemplate/HomeTemplate';
 import FilmDetail from '../../components/Detail/FilmDetail';
-import { getApiFilmDetail } from '../../redux/actions/FilmActions';
+
 import FilmSchedule from '../../components/Detail/FilmSchedule';
 import { getTimescheduleAction } from '../../redux/actions/FilmActions';
 import './Detail.css';
@@ -19,16 +19,15 @@ export default function Detail(props) {
         trailer,
         heThongRapChieu,
     } = filmSchedule;
-    const { isLoading } = useSelector((state) => state.LoadingReducer);
+
     const dispatch = useDispatch();
     useEffect(() => {
         const { postId } = props.match.params;
-        console.log('maPhim', postId);
+
         // const action = getApiFilmDetail(postId);
         const action = getTimescheduleAction(postId);
         dispatch(action);
     }, []);
-    console.log('filmSchedule', filmSchedule);
 
     return (
         <HomeTemplate>
@@ -53,7 +52,7 @@ export default function Detail(props) {
                     <div className='FilmDetail-trailer mt-5 film__trailer'>
                         <iframe
                             src={trailer}
-                            height='150'
+                            height='100'
                             frameBorder='0'
                             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                             allowFullScreen

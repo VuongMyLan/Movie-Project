@@ -27,7 +27,7 @@ export default function QuanLyNguoiDung() {
     const onSearch = (value) => {
         dispatch(getListUSer(value));
     };
-    console.log(arrUser);
+
     return (
         <div>
             <AdminTemplate>

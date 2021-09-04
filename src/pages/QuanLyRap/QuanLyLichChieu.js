@@ -8,9 +8,9 @@ import { useFormik } from 'formik';
 import { createShowTimesAction } from '../../redux/actions/FilmActions';
 import { useDispatch } from 'react-redux';
 // import Form from 'antd/lib/form/Form';
-import FormList from 'antd/lib/form/FormList';
+
 import moment from 'moment';
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Button } from 'antd';
 import * as Yup from 'yup';
 const { Option } = Select;
 
@@ -25,7 +25,6 @@ export default function QuanLyLichChieu(props) {
             giaVe: '',
         },
         onSubmit: async (values) => {
-            console.log('value', values);
             dispatch(createShowTimesAction(values));
         },
         validationSchema: Yup.object({
@@ -59,7 +58,7 @@ export default function QuanLyLichChieu(props) {
             const response = await quanLyCumRapService.getListMovieTheater(
                 value
             );
-            console.log(response);
+
             //Gán giá trị cụm rạp vào state.cumRap
             setState({
                 ...state,
@@ -71,7 +70,6 @@ export default function QuanLyLichChieu(props) {
         formik.setFieldValue('cumRap', value);
     };
     const convertSelectCinemaList = () => {
-        // state.heThongRapChieu?.map((htr, index) => ({ label: htr.tenHeThongRap, value: htr.tenHeThongRap }))
         return state.heThongRapChieu?.map((htr, index) => {
             return { label: htr.tenHeThongRap, value: htr.maHeThongRap };
         });
@@ -83,15 +81,10 @@ export default function QuanLyLichChieu(props) {
     };
     const handleChangeCumRap = (value) => {
         formik.setFieldValue('maRap', value);
-        console.log('change cum rap' + value);
     };
 
     const onChangeDate = (values) => {
         formik.setFieldValue(
-            'ngayChieuGioChieu',
-            moment(values).format('DD/MM/YYYY hh:mm:ss')
-        );
-        console.log(
             'ngayChieuGioChieu',
             moment(values).format('DD/MM/YYYY hh:mm:ss')
         );
@@ -104,7 +97,6 @@ export default function QuanLyLichChieu(props) {
     };
 
     const onChangeInputNumber = (values) => {
-        console.log('onChangeInputNumber', values);
         formik.setFieldValue('giaVe', values);
     };
     return (

@@ -1,8 +1,4 @@
-import {
-    CHANGE_TAB,
-    FINISH_BOOKING,
-    SET_CINEMA,
-} from '../actions/types/FilmType';
+import { CHANGE_TAB, FINISH_BOOKING } from '../actions/types/FilmType';
 
 import { quanLyGheService } from '../services/QuanLyGheService';
 import { bookingroomAction } from './FilmActions';
@@ -14,7 +10,7 @@ export const bookingTicketAction = (bookingInfo) => {
             dispatch(displayLoadingAction);
             let result = await quanLyGheService.bookingTicket(bookingInfo);
             await dispatch(bookingroomAction(bookingInfo.maLichChieu));
-            console.log('Result', result);
+
             dispatch({
                 type: FINISH_BOOKING,
             });
@@ -23,7 +19,6 @@ export const bookingTicketAction = (bookingInfo) => {
             dispatch({
                 type: CHANGE_TAB,
             });
-            console.log('dispatch', dispatch);
         } catch (error) {
             alert(error.response?.data);
             console.log('error', error.response?.data);

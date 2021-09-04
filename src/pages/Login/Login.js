@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useFormik } from 'formik';
 import Background from '../../asset/img/bg2.jpg';
 import './Login.css';
@@ -10,7 +10,7 @@ import { userLoginAction } from '../../redux/actions/UserAction';
 
 const Login = () => {
     const dispatch = useDispatch();
-    const { userLogin } = useSelector((state) => state.UserReducer);
+
     const formik = useFormik({
         initialValues: {
             taiKhoan: '',
@@ -19,8 +19,6 @@ const Login = () => {
 
         onSubmit: (values) => {
             dispatch(userLoginAction(values));
-
-            console.log(values);
         },
     });
 

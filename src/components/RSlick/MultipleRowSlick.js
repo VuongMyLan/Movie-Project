@@ -34,20 +34,21 @@ function SamplePrevArrow(props) {
 const MultipleItems = (props) => {
     const { Search } = Input;
     const { arrFilm } = useSelector((state) => state.FilmReducer);
-    console.log('arrFilm', arrFilm);
+
     const dispatch = useDispatch();
 
     useEffect(() => {
         const action = getApiFilmAction();
         dispatch(action);
     }, []);
+
     var settings = {
         className: 'center variable-width',
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         centerPadding: '60px',
         rows: 1,
         centerMode: true,

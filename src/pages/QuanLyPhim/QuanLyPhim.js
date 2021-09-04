@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import AdminTemplate from '../../components/Templates/AdminTemplate/AdminTemplate';
 import ListItemContainer from '../../components/Admin/ListItemContainer';
-import Modal from '../../components/Admin/Modal';
-import { Button, Input } from 'antd';
+import { Modal } from 'antd';
+import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import { NavLink } from 'react-router-dom';
 import './QuanLyPhim.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getApiFilmAction } from '../../redux/actions/FilmActions';
-import Form from 'antd/lib/form/Form';
+
 const { Search } = Input;
-export default function gQuanLyPhim() {
+export default function QuanLyPhim() {
     const { arrFilm } = useSelector((state) => state.FilmReducer);
     const [openModal, setOpenModal] = useState(false);
     /*const [dataFilm, setDataFilm] = useState(arrFilm);

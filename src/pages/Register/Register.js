@@ -47,8 +47,6 @@ const Register = () => {
 
         onSubmit: (values) => {
             dispatch(userRegisterAction(values));
-
-            console.log(values);
         },
     });
     const { touched, errors } = formik;

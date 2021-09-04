@@ -5,8 +5,6 @@ import {
     SET_CHI_TIET_PHONG_VE,
     SET_FILM_DETAIL,
     GET_SCHEDULE,
-    DISPLAY_LOADING,
-    HIDE_LOADING,
 } from '../actions/types/FilmType';
 import { displayLoadingAction, hideLoadingAction } from './LoadingAction';
 import { history } from '../../App';
@@ -44,7 +42,7 @@ export const bookingroomAction = (maLichChieu) => {
 export const getApiFilmDetail = (maPhim) => async (dispatch) => {
     try {
         const response = await quanLyPhimService.getFilmDetail(maPhim);
-        console.log(response.data);
+
         const action = {
             type: SET_FILM_DETAIL,
             filmDetail: response.data,
@@ -75,7 +73,7 @@ export const getTimescheduleAction = (maPhim) => {
 export const AddFilmAction = (formData) => async () => {
     try {
         const result = await quanLyPhimService.addFilmUploadHinh(formData);
-        console.log(result);
+
         //const response = await quanLyPhimService.addFilm(formData);
         //console.log(response);
         alert('Add Films successfully');
@@ -88,11 +86,10 @@ export const AddFilmAction = (formData) => async () => {
 export const EditFilmAction = (formData) => async () => {
     try {
         const result = await quanLyPhimService.editFilmUploadHinh(formData);
-        console.log('formData', formData);
+
         alert('Edit film successfully!');
 
         history.push('/admin/film');
-        console.log(result);
     } catch (err) {
         console.log('error', err.response?.data);
     }
@@ -102,7 +99,7 @@ export const DeleteFilmAction = (maPhim) => async (dispatch) => {
     try {
         const result = await quanLyPhimService.deleteFilm(maPhim);
         alert('Delete Films Successfully');
-        console.log(result);
+
         dispatch(getApiFilmAction());
     } catch (err) {
         console.log('error', err.response?.data);

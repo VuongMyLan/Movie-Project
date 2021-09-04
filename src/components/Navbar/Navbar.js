@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../asset/web-logo.png';
-import { Input, Space } from 'antd';
+import { Input } from 'antd';
 import { getApiFilmAction } from '../../redux/actions/FilmActions';
 
 import './Navbar.css';
@@ -10,9 +10,9 @@ import { useSelector } from 'react-redux';
 
 import { Anchor } from 'antd';
 import _ from 'lodash';
-import { ACCESSTOKEN, USER_LOGIN } from '../../util/setting';
 
 export default function Navbar() {
+    const { Link } = Anchor;
     const { Search } = Input;
     const dispatch = useDispatch();
     const renderLogout = () => {
@@ -25,7 +25,7 @@ export default function Navbar() {
 
     const renderLogin = () => {
         const { userLogin } = useSelector((state) => state.UserReducer);
-        console.log('_.isEmpty(userLogin)', _.isEmpty(userLogin));
+
         if (_.isEmpty(userLogin)) {
             return (
                 <button
@@ -120,9 +120,18 @@ export default function Navbar() {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/home' className='nav-item nav-link'>
-                                Theaters
-                            </NavLink>
+                            <Anchor>
+                                <NavLink
+                                    to='/home'
+                                    className='nav-item nav-link'
+                                >
+                                    {' '}
+                                    <Link
+                                        href='#myTable'
+                                        title='Theaters'
+                                    />{' '}
+                                </NavLink>
+                            </Anchor>
                         </li>
                     </ul>
                     {/* <span className='nav-item'>{renderSearch()}</span> */}

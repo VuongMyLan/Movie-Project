@@ -30,7 +30,7 @@
     border-radius: 50px;
     background: linear-gradient(-45deg, #5ee3e7, #20aacc, #338aff, #3cf0c5);
     background-size: 600%;
-    animation: anime 16s linear infinite;
+    animation: anime 10s linear infinite;
     padding: 5px 0;
     font-weight: bold;
 }

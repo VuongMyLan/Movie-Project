@@ -16,7 +16,6 @@ export default function Profile() {
     const dispatch = useDispatch();
     const { userHistory } = useSelector((state) => state.UserReducer);
     const { userLogin } = useSelector((state) => state.UserReducer);
-    console.log('userLogin', userLogin.taiKhoan);
 
     const [componentSize, setComponentSize] = useState('default');
 
@@ -28,7 +27,6 @@ export default function Profile() {
         const action = userHistoryAction(userLogin);
         dispatch(action);
     }, []);
-    console.log('userHistory', userHistory);
 
     const formik = useFormik({
         enableReinitialize: true,
@@ -43,7 +41,6 @@ export default function Profile() {
         },
 
         onSubmit: (values) => {
-            console.log('values', values);
             const action = editUser(values);
             dispatch(action);
         },

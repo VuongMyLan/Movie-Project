@@ -20,7 +20,6 @@ export default function MyTable() {
         dispatch(action);
     }, []);
 
-    console.log('cinemaData', cinemaData);
     //console.log(filmSchedule);
     const { TabPane } = Tabs;
 
@@ -135,7 +134,7 @@ export default function MyTable() {
     };
 
     return (
-        <div className='container'>
+        <div className='container' id='myTable'>
             <Tabs tabPosition={'left'}>{renderHeThongRap()}</Tabs>
         </div>
     );

@@ -1,17 +1,6 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import {
-    Form,
-    Input,
-    Button,
-    Radio,
-    Select,
-    Cascader,
-    DatePicker,
-    InputNumber,
-    TreeSelect,
-    Switch,
-} from 'antd';
+import { Form, Input, Button, Radio, DatePicker, InputNumber } from 'antd';
 import { useSelector } from 'react-redux';
 import AdminTemplate from '../../components/Templates/AdminTemplate/AdminTemplate';
 import { useFormik } from 'formik';
@@ -22,13 +11,13 @@ import {
 } from '../../redux/actions/FilmActions';
 import { useDispatch } from 'react-redux';
 import moment from 'moment';
-import { set } from 'lodash';
+
 import { Modal } from 'antd';
 
 export default function EditFilm(props) {
     const dispatch = useDispatch();
     const { filmDetail } = useSelector((state) => state.FilmReducer);
-    console.log('filmDetail', filmDetail);
+
     const formik = useFormik({
         enableReinitialize: true,
         initialValues: {
@@ -44,7 +33,6 @@ export default function EditFilm(props) {
         },
 
         onSubmit: (values) => {
-            console.log(values);
             let formData = new FormData();
             for (let key in values) {
                 if (key !== 'hinhAnh') {
@@ -87,12 +75,10 @@ export default function EditFilm(props) {
     };
 
     const handleCancel = () => {
-        console.log('Clicked cancel button');
         setVisible(false);
     };
 
     const handleDatePicker = (value) => {
-        console.log('ngayKhoiChieu', moment(value));
         formik.setFieldValue('ngayKhoiChieu', value);
     };
     const onFormLayoutChange = ({ size }) => {
@@ -112,7 +98,6 @@ export default function EditFilm(props) {
             const reader = new FileReader();
             reader.readAsDataURL(file);
             reader.onload = (e) => {
-                console.log('data', e.target.result);
                 setImg(e.target.result);
             };
         }
@@ -125,7 +110,6 @@ export default function EditFilm(props) {
     };
 
     useEffect(() => {
-        console.log('id', id);
         dispatch(getApiFilmDetail(id));
     }, []);
     return (

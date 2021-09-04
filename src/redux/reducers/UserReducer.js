@@ -6,7 +6,6 @@ if (localStorage.getItem(USER_LOGIN)) {
     usLogin = JSON.parse(localStorage.getItem(USER_LOGIN));
 }
 
-console.log('usLogin', usLogin);
 let usRegister = {};
 
 const stateDefault = {

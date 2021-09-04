@@ -95,15 +95,12 @@ const ListItemContainer = ({ filmData, ControlRender }) => {
                             style={{ cursor: 'pointer' }}
                             className='text-2xl'
                             onClick={() => {
-                                //Gọi action xoá
                                 if (
                                     window.confirm(
                                         'Bạn có chắc muốn xoá phim ' +
                                             film.tenPhim
                                     )
                                 ) {
-                                    //Gọi action
-                                    // dispatch(xoaPhimAction(film.maPhim));
                                     dispatch(DeleteFilmAction(film.maPhim));
                                 }
                             }}
@@ -271,34 +268,7 @@ const ListItemContainer = ({ filmData, ControlRender }) => {
             </div>
         );
     };
-    return (
-        /*  <div className='d-flex flex-column'>
-            {filmData
-                .filter((val) => {
-                    if (searchTerm === '') {
-                        return val;
-                    } else if (
-                        val.tenPhim
-                            .toLowerCase()
-                            .includes(searchTerm.toLowerCase())
-                    ) {
-                        return val;
-                    }
-                })
-                .map((item, index) => {
-                    return (
-                        <ListItem
-                            showAndHideModal={showAndHideModal}
-                            key={item.maPhim}
-                            name={item.tenPhim}
-                            img={item.hinhAnh}
-                            idnumber={index}
-                        />
-                    );
-                })}
-        </div>*/
-        <div>{renderTable()}</div>
-    );
+    return <div>{renderTable()}</div>;
 };
 
 ListItemContainer.propTypes = {
